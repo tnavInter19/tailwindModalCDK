@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { isBefore } from 'date-fns';
 import { ActivatedRoute, Router } from '@angular/router';
 import { JobsService } from '../jobs.service';
@@ -10,10 +10,10 @@ import { JobsService } from '../jobs.service';
   styleUrls: ['./update-jobs.component.less']
 })
 export class UpdateJobsComponent implements OnInit {
- form!: FormGroup;
+ form!: UntypedFormGroup;
  jobId!:string;
   constructor(
-    private readonly fb: FormBuilder,
+    private readonly fb: UntypedFormBuilder,
     private readonly _jobService: JobsService,
     private readonly router: Router,
     private readonly route: ActivatedRoute
