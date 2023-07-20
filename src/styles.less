@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* Custom user generated styles*/
+@import "styles/custom-styles.less";
+@import '@angular/cdk/overlay-prebuilt.css';
+body {
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+}
+
+
+// Overlay backdrop styling
+.overlay-backdrop {
+ background-color: rgba(0, 0, 0, 0.5);
+}
+
+// Overlay panel styling
+.overlay-panel {
+ display: flex;
+ flex-direction: column;
+ background-color: #ffffff;
+ padding: 20px;
+ overflow: auto;
+}
