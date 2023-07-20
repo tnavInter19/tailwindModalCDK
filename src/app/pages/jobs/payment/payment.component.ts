@@ -14,7 +14,7 @@ export class PaymentComponent implements OnInit {
   }
 deactivate(){
  console.log("this is deactivated")
- this.dialogRef.close();
+ this.dialogRef.close("data send");
 }
   cancel(){
    console.log("it is canceled");
