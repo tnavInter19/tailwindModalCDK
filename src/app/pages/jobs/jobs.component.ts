@@ -63,6 +63,11 @@ export class JobsComponent implements OnInit {
 
   dialogRef.afterClosed().subscribe((data) => {
     // Subscription runs after the dialog closes
+
+    if(data){
+     // if data is there here we can do api call in parent component and notify the api status in alerts.
+    }
+    // else it will be normal close.
     console.log(data);
     console.log('Dialog closed!');
   });
