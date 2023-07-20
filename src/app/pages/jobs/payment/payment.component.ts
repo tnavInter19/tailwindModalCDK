@@ -1,6 +1,9 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { DialogRef } from 'src/app/core/dialog/dialog-ref';
-import { DIALOG_DATA } from 'src/app/core/dialog/dialog-tokens';
+import {Dialog, DialogRef, DIALOG_DATA} from '@angular/cdk/dialog';
+
+export interface DialogData {
+ data: string;
+}
 
 @Component({
   selector: 'pmo-payment',
@@ -9,7 +12,7 @@ import { DIALOG_DATA } from 'src/app/core/dialog/dialog-tokens';
 })
 export class PaymentComponent implements OnInit {
 
-  constructor( private dialogRef: DialogRef,@Inject(DIALOG_DATA) public data: string) { }
+  constructor(public dialogRef: DialogRef<string>, @Inject(DIALOG_DATA) public data: DialogData) { }
 // data is where we want to access data from parent component
   ngOnInit(): void {
   }

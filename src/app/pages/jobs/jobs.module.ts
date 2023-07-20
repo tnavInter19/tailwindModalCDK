@@ -6,6 +6,7 @@ import { NewJobsComponent } from './new-jobs/new-jobs.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpdateJobsComponent } from './update-jobs/update-jobs.component';
 import { PaymentComponent } from './payment/payment.component';
+import { DialogModule } from '@angular/cdk/dialog';
 
 const routes: Routes = [
  { path: '', component: JobsComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   imports: [
    CommonModule,
    FormsModule,
+   DialogModule,
    ReactiveFormsModule,
    RouterModule.forChild(routes)
  ]

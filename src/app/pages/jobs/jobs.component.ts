@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { JobsService } from './jobs.service';
-import { DialogService } from 'src/app/core/dialog/dialog.service';
 import { UpdateJobsComponent } from './update-jobs/update-jobs.component';
 import { PaymentComponent } from './payment/payment.component';
+import {Dialog, DIALOG_DATA, DialogRef} from '@angular/cdk/dialog';
 
 @Component({
   selector: 'pmo-jobs',
@@ -13,7 +13,7 @@ export class JobsComponent implements OnInit {
 
  jobList:any = [];
 
- constructor(private _jobService: JobsService,private dialog: DialogService){}
+ constructor(private _jobService: JobsService,private dialog: Dialog){}
 
  ngOnInit(): void {
    this.listJobs();
@@ -61,7 +61,7 @@ export class JobsComponent implements OnInit {
  openLogin() {
   const dialogRef = this.dialog.open(PaymentComponent, { data: 'John' });
 
-  dialogRef.afterClosed().subscribe((data) => {
+  dialogRef.closed().subscribe((data) => {
     // Subscription runs after the dialog closes
 
     if(data){
