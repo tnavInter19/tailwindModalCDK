@@ -59,9 +59,9 @@ export class JobsComponent implements OnInit {
  }
 
  openLogin() {
-  const dialogRef = this.dialog.open(PaymentComponent, { data: 'John' });
+  const dialogRef = this.dialog.open<string>(PaymentComponent, { data: 'John' });
 
-  dialogRef.closed().subscribe((data) => {
+  dialogRef.closed.subscribe((data:any) => {
     // Subscription runs after the dialog closes
 
     if(data){
