@@ -7,7 +7,6 @@ import {CoreModule} from "./core/core.module";
 import {ReactiveFormsModule} from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
 import { environment } from '../environments/environment';
-import { OverlayModule } from '@angular/cdk/overlay';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,6 @@ import { OverlayModule } from '@angular/cdk/overlay';
     AppRoutingModule,
     ReactiveFormsModule,
     CoreModule,
-    OverlayModule,
     HttpClientModule
   ],
   providers: [],
