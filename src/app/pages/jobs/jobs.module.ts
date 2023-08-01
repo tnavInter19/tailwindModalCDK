@@ -12,6 +12,9 @@ import { CdkMenu, CdkMenuItem, CdkMenuTrigger } from '@angular/cdk/menu';
 import { DragDropComponent } from './drag-drop/drag-drop.component';
 import {CdkDrag, CdkDropList, CdkDropListGroup} from '@angular/cdk/drag-drop';
 import { ComboBoxComponent } from './combo-box/combo-box.component';
+import { StepperPageComponent } from './stepper-page/stepper-page.component';
+import { StepperComponent } from './stepper-page/stepper/stepper.component';
+import { CdkStepperModule } from '@angular/cdk/stepper';
 
 const routes: Routes = [
   { path: '', component: JobsComponent },
@@ -19,6 +22,7 @@ const routes: Routes = [
   { path: 'nav', component: NavComponent },
   { path: 'drag', component: DragDropComponent },
   { path: 'combo', component: ComboBoxComponent },
+  { path: 'stepper', component: StepperPageComponent },
   { path: ':id', component: UpdateJobsComponent },
 
 ];
@@ -32,6 +36,8 @@ const routes: Routes = [
     NavComponent,
     DragDropComponent,
     ComboBoxComponent,
+    StepperPageComponent,
+    StepperComponent,
   ],
   imports: [
     CommonModule,
@@ -41,6 +47,7 @@ const routes: Routes = [
     CdkDrag,
     CdkDropListGroup, CdkDropList,
     CdkMenu,
+    CdkStepperModule,
     CdkMenuItem,
     ReactiveFormsModule,
     RouterModule.forChild(routes),
