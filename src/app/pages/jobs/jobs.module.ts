@@ -11,12 +11,14 @@ import { NavComponent } from './nav/nav.component';
 import { CdkMenu, CdkMenuItem, CdkMenuTrigger } from '@angular/cdk/menu';
 import { DragDropComponent } from './drag-drop/drag-drop.component';
 import {CdkDrag, CdkDropList, CdkDropListGroup} from '@angular/cdk/drag-drop';
+import { ComboBoxComponent } from './combo-box/combo-box.component';
 
 const routes: Routes = [
   { path: '', component: JobsComponent },
   { path: 'new', component: NewJobsComponent },
   { path: 'nav', component: NavComponent },
   { path: 'drag', component: DragDropComponent },
+  { path: 'combo', component: ComboBoxComponent },
   { path: ':id', component: UpdateJobsComponent },
 
 ];
@@ -29,6 +31,7 @@ const routes: Routes = [
     PaymentComponent,
     NavComponent,
     DragDropComponent,
+    ComboBoxComponent,
   ],
   imports: [
     CommonModule,
