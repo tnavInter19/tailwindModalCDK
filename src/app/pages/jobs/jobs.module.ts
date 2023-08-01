@@ -8,14 +8,18 @@ import { UpdateJobsComponent } from './update-jobs/update-jobs.component';
 import { PaymentComponent } from './payment/payment.component';
 import { DialogModule } from '@angular/cdk/dialog';
 import { NavComponent } from './nav/nav.component';
-import {CdkMenu, CdkMenuItem, CdkMenuTrigger} from '@angular/cdk/menu'; 
+import { CdkMenu, CdkMenuItem, CdkMenuTrigger } from '@angular/cdk/menu';
+import { DragDropComponent } from './drag-drop/drag-drop.component';
+import {CdkDrag, CdkDropList, CdkDropListGroup} from '@angular/cdk/drag-drop';
 
 const routes: Routes = [
- { path: '', component: JobsComponent },
- { path: 'new', component: NewJobsComponent },
- { path: 'nav', component:NavComponent },
- { path: ':id', component:UpdateJobsComponent },
-]
+  { path: '', component: JobsComponent },
+  { path: 'new', component: NewJobsComponent },
+  { path: 'nav', component: NavComponent },
+  { path: 'drag', component: DragDropComponent },
+  { path: ':id', component: UpdateJobsComponent },
+
+];
 
 @NgModule({
   declarations: [
@@ -23,15 +27,20 @@ const routes: Routes = [
     NewJobsComponent,
     UpdateJobsComponent,
     PaymentComponent,
-    NavComponent
+    NavComponent,
+    DragDropComponent,
   ],
   imports: [
-   CommonModule,
-   FormsModule,
-   DialogModule,
-   CdkMenuTrigger, CdkMenu, CdkMenuItem,
-   ReactiveFormsModule,
-   RouterModule.forChild(routes)
- ]
+    CommonModule,
+    FormsModule,
+    DialogModule,
+    CdkMenuTrigger,
+    CdkDrag,
+    CdkDropListGroup, CdkDropList,
+    CdkMenu,
+    CdkMenuItem,
+    ReactiveFormsModule,
+    RouterModule.forChild(routes),
+  ],
 })
-export class JobsModule { }
+export class JobsModule {}
