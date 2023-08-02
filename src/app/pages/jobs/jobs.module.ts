@@ -16,6 +16,8 @@ import { StepperPageComponent } from './stepper-page/stepper-page.component';
 import { StepperComponent } from './stepper-page/stepper/stepper.component';
 import { CdkStepperModule } from '@angular/cdk/stepper';
 import { TablePaginationComponent } from './table-pagination/table-pagination.component';
+import { StepperFormComponent } from './stepper-form/stepper-form.component';
+import { StepFormComponent } from './stepper-form/step-form/step-form.component';
 
 const routes: Routes = [
   { path: '', component: JobsComponent },
@@ -25,6 +27,7 @@ const routes: Routes = [
   { path: 'combo', component: ComboBoxComponent },
   { path: 'stepper', component: StepperPageComponent },
   { path: 'table', component: TablePaginationComponent },
+  { path: 'stepform', component: StepperFormComponent },
   { path: ':id', component: UpdateJobsComponent },
 
 ];
@@ -41,6 +44,8 @@ const routes: Routes = [
     StepperPageComponent,
     StepperComponent,
     TablePaginationComponent,
+    StepperFormComponent,
+    StepFormComponent,
   ],
   imports: [
     CommonModule,
