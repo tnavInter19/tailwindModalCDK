@@ -6,9 +6,9 @@
          <!-- Completed Step -->
          <a href="#" class="group">
            <span   [ngClass]="{
-            'bg-transparent': i !== currentStep,
+            'bg-transparent group-hover:bg-gray-200': i !== currentStep,
             'bg-indigo-600': i === currentStep
-          }" class="absolute left-0 top-0 h-full w-1  group-hover:bg-gray-200 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full" aria-hidden="true"></span>
+          }" class="absolute left-0 top-0 h-full w-1   lg:bottom-0 lg:top-auto lg:h-1 lg:w-full" aria-hidden="true"></span>
            <span class="flex items-start px-6 py-5 text-sm font-medium">
             <span class="flex-shrink-0" *ngIf="currentStep<=i">
              <span class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-indigo-600">
