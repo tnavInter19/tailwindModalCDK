@@ -15,6 +15,7 @@ import { ComboBoxComponent } from './combo-box/combo-box.component';
 import { StepperPageComponent } from './stepper-page/stepper-page.component';
 import { StepperComponent } from './stepper-page/stepper/stepper.component';
 import { CdkStepperModule } from '@angular/cdk/stepper';
+import { TablePaginationComponent } from './table-pagination/table-pagination.component';
 
 const routes: Routes = [
   { path: '', component: JobsComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'drag', component: DragDropComponent },
   { path: 'combo', component: ComboBoxComponent },
   { path: 'stepper', component: StepperPageComponent },
+  { path: 'table', component: TablePaginationComponent },
   { path: ':id', component: UpdateJobsComponent },
 
 ];
@@ -38,6 +40,7 @@ const routes: Routes = [
     ComboBoxComponent,
     StepperPageComponent,
     StepperComponent,
+    TablePaginationComponent,
   ],
   imports: [
     CommonModule,
